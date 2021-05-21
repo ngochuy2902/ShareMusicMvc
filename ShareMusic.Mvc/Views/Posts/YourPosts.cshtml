@@ -1,0 +1,52 @@
+﻿@model IEnumerable<ShareMusic.Mvc.Models.Post>
+
+@{
+    ViewData["Title"] = "Album của bạn";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Bài đăng của bạn</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Tiêu đề
+            </th>
+            <th>
+                Chủ đề
+            </th>
+            <th>
+                Mô tả
+            </th>
+            <th>
+                Thời gian đăng
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PostTime)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Sửa</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Xóa</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Đi đến bài đăng</a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

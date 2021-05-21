@@ -1,0 +1,45 @@
+﻿@model ShareMusic.Mvc.Models.Post
+
+@{
+    ViewData["Title"] = "Xóa album";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Xóa album</h1>
+
+<h4>Bạn có chắc chắn muốn xóa album này?</h4>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Tiêu đề
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class="col-sm-2">
+            Chủ đề
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Category.Description)
+        </dd>
+        <dt class="col-sm-2">
+            Mô tả
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class="col-sm-2">
+            Thời gian đăng
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PostTime)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Xóa" class="btn btn-danger" /><br />
+        <a asp-action="YourPosts">Quay lại</a>
+    </form>
+</div>

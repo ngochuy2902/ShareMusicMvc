@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShareMusic.Mvc", "ShareMusic.Mvc\ShareMusic.Mvc.csproj", "{2C64A1E1-27BF-4AF9-A15B-AFA14427C976}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShareMusic.UnitTest", "ShareMusic.UnitTest\ShareMusic.UnitTest.csproj", "{711BADA1-5AF6-4449-9A9B-910ADB543D36}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C64A1E1-27BF-4AF9-A15B-AFA14427C976}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C64A1E1-27BF-4AF9-A15B-AFA14427C976}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C64A1E1-27BF-4AF9-A15B-AFA14427C976}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C64A1E1-27BF-4AF9-A15B-AFA14427C976}.Release|Any CPU.Build.0 = Release|Any CPU
+		{711BADA1-5AF6-4449-9A9B-910ADB543D36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{711BADA1-5AF6-4449-9A9B-910ADB543D36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{711BADA1-5AF6-4449-9A9B-910ADB543D36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{711BADA1-5AF6-4449-9A9B-910ADB543D36}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A8E08E0C-EE9C-4BE1-9EE6-D630E2543E74}
+	EndGlobalSection
+EndGlobal

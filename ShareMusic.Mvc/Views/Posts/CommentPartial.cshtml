@@ -1,0 +1,15 @@
+﻿@using Microsoft.AspNetCore.Identity
+@model ShareMusic.Mvc.ViewModels.CommentViewModels
+@inject UserManager<ShareMusic.Mvc.Data.ShareMusicMvcUser> UserManager
+<div id="all-comments">
+    @foreach (var comment in Model.Comments.Reverse())
+    {
+
+    <div class="row">
+        <h6 class="ml-3 mr-2 text-dark">@UserManager.FindByIdAsync(comment.UserId).Result.UserName</h6>
+        <p>@comment.Content</p>
+    </div>
+        <div><small>@comment.CommentTime</small></div>
+        <hr />
+    }
+</div>

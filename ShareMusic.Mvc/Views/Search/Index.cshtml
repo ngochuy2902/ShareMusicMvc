@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Tìm kiếm";
+}
+@if (ViewBag.Result == "id" || ViewBag.Result == "Default")
+{
+    <div class="text-center">
+        <partial name="SearchPartial" />
+    </div>
+}
+else if (ViewBag.Result == "Empty")
+{
+    <h3>Không có kết quả</h3>
+}
+else if (ViewBag.Result != "")
+{
+    <h3>@ViewBag.Result</h3>
+}

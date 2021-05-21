@@ -1,0 +1,14 @@
+﻿@inject SignInManager<ShareMusicMvcUser> SignInManager
+@{
+    var hasExternalLogins = (await SignInManager.GetExternalAuthenticationSchemesAsync()).Any();
+}
+    <ul class="nav nav-pills flex-column">
+        <li class="nav-item"><a class="nav-link @ManageNavPages.IndexNavClass(ViewContext)" id="profile" asp-page="./Index">Thông tin</a></li>
+        <li class="nav-item"><a class="nav-link @ManageNavPages.ChangePasswordNavClass(ViewContext)" id="change-password" asp-page="./ChangePassword">Mật khẩu</a></li>
+        <li class="nav-item"><a class="nav-link" asp-controller="Posts" asp-action="YourPosts">Bài đăng của bạn</a></li>
+        @if (SignInManager.Context.User.IsInRole("Administrator"))
+        {
+            <li class="nav-item"><a class="nav-link menu-link" asp-area="" asp-controller="Admin" asp-action="Index">Quản lý người dùng</a></li>
+            <li class="nav-item"><a class="nav-link menu-link" asp-area="" asp-controller="Posts" asp-action="Index">Quản lý bài đăng</a></li>
+        }
+    </ul>

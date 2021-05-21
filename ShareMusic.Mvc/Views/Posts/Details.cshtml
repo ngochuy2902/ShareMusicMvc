@@ -1,0 +1,67 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject UserManager<ShareMusic.Mvc.Data.ShareMusicMvcUser> UserManager
+@inject SignInManager<ShareMusic.Mvc.Data.ShareMusicMvcUser> SignInManager
+@model ShareMusic.Mvc.ViewModels.CommentViewModels
+
+@{
+    ViewData["Title"] = "Chi tiết";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row justify-content-md-center">
+    <div class="card" style="width: 100%;">
+        <div class="card-body">
+            <div class="row">
+                <div class="col col-lg-3">
+                    <img class="card-img-top card-thumbnail rounded-circle rotated" src="~/images/@Model.Post.ImagePath" alt="Card image cap">
+                </div>
+                <div class="col col-lg-auto ml-5">
+                    <h5 class="card-title">@Model.Post.Title</h5>
+                    <p class="card-text">Thể loại: @Model.Post.Category.Description</p>
+                    <p class="card-text">Mô tả: @Model.Post.Description</p>
+                    <p class="card-text">Người đăng: @UserManager.FindByIdAsync(Model.Post.UserId).Result.UserName</p>
+                    <p class="card-text">Thời gian đăng: @Model.Post.PostTime</p>
+                    @foreach (var music in Model.Musics)
+                    {
+                        <p>@music.MusicName</p>
+                        <audio controls>
+                            <source src="~/musics/@music.MusicURL" type="audio/ogg">
+                            <source src="~/musics/@music.MusicURL" type="audio/mpeg">
+                        </audio>
+                        <br />
+                    }
+                </div>
+            </div>
+        </div>
+        <br />
+        <hr>
+        @if (SignInManager.IsSignedIn(User))
+        {
+            <div class="row">
+                <div class="col-12">
+                    <h4>Bình luận</h4>
+                    <form method="post" action="/Posts/AddComment" id="form-comment">
+                        <textarea class="form-control" name="comment" rows="3" id="textarea-comment"> </textarea>
+                        <br />
+                        <input class="form-element" value="@UserManager.GetUserId(User)" name="userId" type="hidden" />
+                        <input type="hidden" value=@Model.Post.Id name="postId" />
+                        <button type="submit" class="btn btn-dark float-right w-25">Đăng</button>
+                    </form>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="row">
+                <div class="col-12">
+                    <h4>Bình luận</h4>
+                    <h6 class="font-italic font-weight-normal">(Bạn cần <span><a asp-area="Identity" asp-page="/Account/Login" asp-route-returnUrl="@Url.Action("Details", "Posts", new { id = Model.Post.Id })">đăng nhập</a></span> để đăng bình luận)</h6>
+                </div>
+            </div>
+        }
+
+        <div class="mt-5 col-6" id="comments-box">
+            <partial name="CommentPartial" />
+        </div>
+    </div>
+</div>

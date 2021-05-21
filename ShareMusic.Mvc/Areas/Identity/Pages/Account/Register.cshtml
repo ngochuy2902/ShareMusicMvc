@@ -1,0 +1,42 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Đăng ký";
+}
+<div class="card login-card">
+    <div class="row no-gutters">
+        <div class="col-md-5">
+            <img src="~/images/page/login-image.jpg" alt="register" class="login-card-img">
+        </div>
+        <div class="col-md-7">
+            <div class="card-body">
+                <div class="brand-wrapper">
+                    <img src="~/images/page/icon.png" alt="logo" class="logo">
+                </div>
+                <p class="login-card-description">Đăng ký</p>
+                <form id="account" method="post">
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <div class="form-group">
+                        <input asp-for="Input.UserName" class="form-control" placeholder="Tên đăng nhập" />
+                        <span asp-validation-for="Input.UserName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input asp-for="Input.Password" class="form-control" placeholder="Mật khẩu" />
+                        <span asp-validation-for="Input.Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input asp-for="Input.ConfirmPassword" class="form-control" placeholder="Nhập lại mật khẩu"/>
+                        <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                    </div>
+                    <div class="">
+                        <button type="submit" class="btn btn-block login-btn mb-4">Đăng ký</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

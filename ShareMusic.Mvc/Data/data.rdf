@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE rdf:RDF [
+	<!ENTITY rdf 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+	<!ENTITY rdfs 'http://www.w3.org/2000/01/rdf-schema#'>
+	<!ENTITY xsd 'http://www.w3.org/2001/XMLSchema#'>
+]>
+<rdf:RDF xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  
+  <rdf:Description rdf:about="http://www.sharemusic.vn/playlist#1">
+    <ns0:id xmlns:ns0="http://www.sharemusic.vn/">1</ns0:id>
+    <ns1:theme xmlns:ns1="http://www.sharemusic.vn/">nhạc trẻ</ns1:theme>
+    <ns1:theme xmlns:ns1="http://www.sharemusic.vn/">nhac tre</ns1:theme>
+    <ns1:title xmlns:ns1="http://www.sharemusic.vn/">Album Erik</ns1:title>
+    <ns2:user xmlns:ns2="http://www.sharemusic.vn/">ngochuy</ns2:user>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sharemusic.vn/playlist#2">
+    <ns0:id xmlns:ns0="http://www.sharemusic.vn/">2</ns0:id>
+    <ns1:theme xmlns:ns1="http://www.sharemusic.vn/">nhạc trẻ</ns1:theme>
+    <ns1:theme xmlns:ns1="http://www.sharemusic.vn/">nhac tre</ns1:theme>
+    <ns1:title xmlns:ns1="http://www.sharemusic.vn/">Album Đức Phúc</ns1:title>
+    <ns2:user xmlns:ns2="http://www.sharemusic.vn/">ngochuy</ns2:user>
+    <ns2:new xmlns:ns2="http://www.sharemusic.vn/">moi</ns2:new>
+    <ns2:new xmlns:ns2="http://www.sharemusic.vn/">mới</ns2:new>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sharemusic.vn/playlist#3">
+    <ns0:id xmlns:ns0="http://www.sharemusic.vn/">3</ns0:id>
+    <ns1:theme xmlns:ns1="http://www.sharemusic.vn/">nhạc không lời</ns1:theme>
+    <ns1:theme xmlns:ns1="http://www.sharemusic.vn/">nhac khong loi</ns1:theme>
+    <ns1:title xmlns:ns1="http://www.sharemusic.vn/">Album piano An Coong</ns1:title>
+    <ns2:user xmlns:ns2="http://www.sharemusic.vn/">ngochuy</ns2:user>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sharemusic.vn/playlist#4">
+    <ns0:id xmlns:ns0="http://www.sharemusic.vn/">4</ns0:id>
+    <ns1:theme xmlns:ns1="http://www.sharemusic.vn/">nhạc acoustic</ns1:theme>
+    <ns1:theme xmlns:ns1="http://www.sharemusic.vn/">nhac acoustic</ns1:theme>
+    <ns1:title xmlns:ns1="http://www.sharemusic.vn/">Album acoustic Chu Duyên</ns1:title>
+    <ns2:user xmlns:ns2="http://www.sharemusic.vn/">nguyenhoang</ns2:user>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sharemusic.vn/playlist#5">
+    <ns0:id xmlns:ns0="http://www.sharemusic.vn/">5</ns0:id>
+    <ns1:theme xmlns:ns1="http://www.sharemusic.vn/">nhạc acoustic</ns1:theme>
+    <ns1:theme xmlns:ns1="http://www.sharemusic.vn/">nhac acoustic</ns1:theme>
+    <ns1:title xmlns:ns1="http://www.sharemusic.vn/">Ngô Lan Hương Playlist</ns1:title>
+    <ns2:user xmlns:ns2="http://www.sharemusic.vn/">nguyenhoang</ns2:user>
+    <ns2:new xmlns:ns2="http://www.sharemusic.vn/">moi</ns2:new>
+    <ns2:new xmlns:ns2="http://www.sharemusic.vn/">mới</ns2:new>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sharemusic.vn/playlist#6">
+    <ns0:id xmlns:ns0="http://www.sharemusic.vn/">6</ns0:id>
+    <ns1:theme xmlns:ns1="http://www.sharemusic.vn/">nhạc bolero</ns1:theme>
+    <ns1:theme xmlns:ns1="http://www.sharemusic.vn/">nhac bolero</ns1:theme>
+    <ns1:title xmlns:ns1="http://www.sharemusic.vn/">Album beloro Dương Ngọc Thái</ns1:title>
+    <ns2:user xmlns:ns2="http://www.sharemusic.vn/">hocminh</ns2:user>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sharemusic.vn/playlist#7">
+    <ns0:id xmlns:ns0="http://www.sharemusic.vn/">7</ns0:id>
+    <ns1:theme xmlns:ns1="http://www.sharemusic.vn/">nhạc bolero</ns1:theme>
+    <ns1:theme xmlns:ns1="http://www.sharemusic.vn/">nhac bolero</ns1:theme>
+    <ns1:title xmlns:ns1="http://www.sharemusic.vn/">Album beloro Quang Lê</ns1:title>
+    <ns2:user xmlns:ns2="http://www.sharemusic.vn/">hocminh</ns2:user>
+    <ns2:new xmlns:ns2="http://www.sharemusic.vn/">moi</ns2:new>
+    <ns2:new xmlns:ns2="http://www.sharemusic.vn/">mới</ns2:new>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sharemusic.vn/playlist#8">
+    <ns0:id xmlns:ns0="http://www.sharemusic.vn/">9</ns0:id>
+    <ns1:theme xmlns:ns1="http://www.sharemusic.vn/">nhạc tình yêu</ns1:theme>
+    <ns1:theme xmlns:ns1="http://www.sharemusic.vn/">nhac tinh yeu</ns1:theme>
+    <ns1:title xmlns:ns1="http://www.sharemusic.vn/">Album nhạc tình yêu</ns1:title>
+    <ns2:user xmlns:ns2="http://www.sharemusic.vn/">huutai</ns2:user>
+    <ns2:new xmlns:ns2="http://www.sharemusic.vn/">moi</ns2:new>
+    <ns2:new xmlns:ns2="http://www.sharemusic.vn/">mới</ns2:new>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sharemusic.vn/playlist#10">
+    <ns0:id xmlns:ns0="http://www.sharemusic.vn/">10</ns0:id>
+    <ns1:theme xmlns:ns1="http://www.sharemusic.vn/">nhạc rap</ns1:theme>
+    <ns1:theme xmlns:ns1="http://www.sharemusic.vn/">nhac rap</ns1:theme>
+    <ns1:title xmlns:ns1="http://www.sharemusic.vn/">Album rap Đen Vâu</ns1:title>
+    <ns2:user xmlns:ns2="http://www.sharemusic.vn/">camlai</ns2:user>
+    <ns2:new xmlns:ns2="http://www.sharemusic.vn/">moi</ns2:new>
+    <ns2:new xmlns:ns2="http://www.sharemusic.vn/">mới</ns2:new>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sharemusic.vn/playlist#11">
+    <ns0:id xmlns:ns0="http://www.sharemusic.vn/">11</ns0:id>
+    <ns1:theme xmlns:ns1="http://www.sharemusic.vn/">nhạc rap</ns1:theme>
+    <ns1:theme xmlns:ns1="http://www.sharemusic.vn/">nhac rap</ns1:theme>
+    <ns1:title xmlns:ns1="http://www.sharemusic.vn/">Album rap Karik</ns1:title>
+    <ns2:user xmlns:ns2="http://www.sharemusic.vn/">camlai</ns2:user>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sharemusic.vn/playlist#12">
+    <ns0:id xmlns:ns0="http://www.sharemusic.vn/">12</ns0:id>
+    <ns1:theme xmlns:ns1="http://www.sharemusic.vn/">nhạc edm</ns1:theme>
+    <ns1:theme xmlns:ns1="http://www.sharemusic.vn/">nhac edm</ns1:theme>
+    <ns1:title xmlns:ns1="http://www.sharemusic.vn/">Album edm Alan Walker</ns1:title>
+    <ns2:user xmlns:ns2="http://www.sharemusic.vn/">ngochuy</ns2:user>
+    <ns2:new xmlns:ns2="http://www.sharemusic.vn/">moi</ns2:new>
+    <ns2:new xmlns:ns2="http://www.sharemusic.vn/">mới</ns2:new>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sharemusic.vn/playlist#13">
+    <ns0:id xmlns:ns0="http://www.sharemusic.vn/">13</ns0:id>
+    <ns1:theme xmlns:ns1="http://www.sharemusic.vn/">nhạc kpop</ns1:theme>
+    <ns1:theme xmlns:ns1="http://www.sharemusic.vn/">nhac kpop</ns1:theme>
+    <ns1:title xmlns:ns1="http://www.sharemusic.vn/">Album kpop Black Pink</ns1:title>
+    <ns2:user xmlns:ns2="http://www.sharemusic.vn/">nguyenhoang</ns2:user>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sharemusic.vn/playlist#14">
+    <ns0:id xmlns:ns0="http://www.sharemusic.vn/">14</ns0:id>
+    <ns1:theme xmlns:ns1="http://www.sharemusic.vn/">nhạc usuk</ns1:theme>
+    <ns1:theme xmlns:ns1="http://www.sharemusic.vn/">nhac usuk</ns1:theme>
+    <ns1:theme xmlns:ns1="http://www.sharemusic.vn/">nhạc us</ns1:theme>
+    <ns1:theme xmlns:ns1="http://www.sharemusic.vn/">nhac us</ns1:theme>
+    <ns1:title xmlns:ns1="http://www.sharemusic.vn/">Album Maroon 5</ns1:title>
+    <ns2:user xmlns:ns2="http://www.sharemusic.vn/">hocminh</ns2:user>
+    <ns2:new xmlns:ns2="http://www.sharemusic.vn/">moi</ns2:new>
+    <ns2:new xmlns:ns2="http://www.sharemusic.vn/">mới</ns2:new>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sharemusic.vn/playlist#15">
+    <ns0:id xmlns:ns0="http://www.sharemusic.vn/">15</ns0:id>
+    <ns1:theme xmlns:ns1="http://www.sharemusic.vn/">nhạc usuk</ns1:theme>
+    <ns1:theme xmlns:ns1="http://www.sharemusic.vn/">nhac usuk</ns1:theme>
+    <ns1:theme xmlns:ns1="http://www.sharemusic.vn/">nhạc us</ns1:theme>
+    <ns1:theme xmlns:ns1="http://www.sharemusic.vn/">nhac us</ns1:theme>
+    <ns1:title xmlns:ns1="http://www.sharemusic.vn/">Album Adele</ns1:title>
+    <ns2:user xmlns:ns2="http://www.sharemusic.vn/">camlai</ns2:user>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sharemusic.vn/playlist#16">
+    <ns0:id xmlns:ns0="http://www.sharemusic.vn/">16</ns0:id>
+    <ns1:theme xmlns:ns1="http://www.sharemusic.vn/">nhạc edm</ns1:theme>
+    <ns1:theme xmlns:ns1="http://www.sharemusic.vn/">nhac edm</ns1:theme>
+    <ns1:title xmlns:ns1="http://www.sharemusic.vn/">Album K391</ns1:title>
+    <ns2:user xmlns:ns2="http://www.sharemusic.vn/">huutai</ns2:user>
+    <ns2:new xmlns:ns2="http://www.sharemusic.vn/">moi</ns2:new>
+    <ns2:new xmlns:ns2="http://www.sharemusic.vn/">mới</ns2:new>
+  </rdf:Description>
+</rdf:RDF>

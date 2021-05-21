@@ -1,0 +1,30 @@
+﻿@using Microsoft.AspNetCore.Identity
+@model IEnumerable<ShareMusic.Mvc.Models.Post>
+@inject UserManager<ShareMusic.Mvc.Data.ShareMusicMvcUser> UserManager
+@foreach (var item in Model)
+{
+    <div class="row justify-content-md-center">
+        <div class="card" style="width: 100%">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col col-lg-3">
+                        <img class="card-img-top card-thumbnail" src="~/images/@Html.DisplayFor(modelItem => item.ImagePath)" alt="Card image cap">
+                    </div>
+                    <div class="col col-lg-auto">
+                        <h5 class="card-title">@Html.DisplayFor(modelItem => item.Title)</h5>
+                        <p>
+                            Người đăng:
+                            <span>
+                                @UserManager.FindByIdAsync(item.UserId).Result.UserName
+                            </span>
+                        </p>
+                        <p class="card-text">Thể loại: @Html.DisplayFor(modelItem => item.Category.Description)</p>
+                        <p class="card-text">@Html.DisplayFor(modelItem => item.Description)</p>
+                        <p class="card-text">@Html.DisplayFor(modelItem => item.PostTime)</p>
+                        <a class="btn btn-outline-info" asp-action="Details" asp-route-id="@item.Id" asp-controller="Posts">Xem chi tiết</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

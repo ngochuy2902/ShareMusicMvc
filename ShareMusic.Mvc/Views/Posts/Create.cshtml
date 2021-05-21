@@ -1,0 +1,88 @@
+﻿@model ShareMusic.Mvc.ViewModels.PostViewModels
+
+@{
+    ViewData["Title"] = "Tạo album";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Post</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label">Tiêu đề</label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CategoryId" class="control-label">Thể loại nhạc</label>
+                <select asp-for="CategoryId" class="form-control">
+                    <option value=1>Nhạc Trẻ</option>
+                    <option value=2>Nhạc Rap</option>
+                    <option value=3>Nhạc Bolero</option>
+                    <option value=4>Nhạc EDM</option>
+                    <option value=5>Nhạc không lời</option>
+                    <option value=6>Nhạc Acoustic</option>
+                    <option value=7>Nhạc US-UK</option>
+                    <option value=8>Nhạc K-pop</option>
+                    <option value=9>Nhạc tình yêu</option>
+                </select>
+                <span asp-validation-for="CategoryId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label">Mô tả</label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImagePath" class="control-label">Hình ảnh</label>
+                <div class="col-sm-10">
+                    <div class="custom-file">
+                        <input asp-for="ImagePath" class="form-control custom-file-input" accept=".jpg, .png"/>
+                        <label class="custom-file-label">Chọn file ảnh...</label>
+                    </div>
+                </div>
+                <span asp-validation-for="ImagePath" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MusicPaths" class="control-label">Nhạc</label>
+                <div class="col-sm-10">
+                    <div class="custom-file">
+                        <input multiple asp-for="MusicPaths" class="form-control custom-file-input" accept=".mp3"/>
+                        <label class="custom-file-label">Chọn file nhạc...</label>
+                    </div>
+                </div>
+                <span asp-validation-for="MusicPaths" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Tạo album" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-controller="Home" asp-action="Index">Quay lại</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        $(document).ready(function () {
+            $('.custom-file-input').on("change", function () {
+                var fileLabel = $(this).next('.custom-file-label');
+                var files = $(this)[0].files;
+                if (files.length > 1) {
+                    fileLabel.html(files.length + ' files selected');
+                }
+                else if (files.length == 1) {
+                    fileLabel.html(files[0].name);
+                }
+            });
+        });
+    </script>
+}

@@ -1,0 +1,52 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Đăng nhập";
+}
+
+
+<div class="card login-card">
+    <div class="row no-gutters">
+        <div class="col-md-5">
+            <img src="~/images/page/login-image.jpg" alt="login" class="login-card-img">
+        </div>
+        <div class="col-md-7">
+            <div class="card-body">
+                <div class="brand-wrapper">
+                    <img src="~/images/page/icon.png" alt="logo" class="logo">
+                </div>
+                <p class="login-card-description">Đăng nhập</p>
+                <form id="account" method="post">
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <div class="form-group">
+                        @*<label asp-for="Input.UserName">Tên đăng nhập</label>*@
+                        <input asp-for="Input.UserName" class="form-control" placeholder="Tên đăng nhập" />
+                        <span asp-validation-for="Input.UserName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-4">
+                        @*<label asp-for="Input.Password">Mật khẩu</label>*@
+                        <input asp-for="Input.Password" class="form-control" placeholder="Mật khẩu" />
+                        <span asp-validation-for="Input.Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <label asp-for="Input.RememberMe">
+                                <input asp-for="Input.RememberMe" />
+                                Ghi nhớ đăng nhập?
+                            </label>
+                        </div>
+                    </div>
+                    <div class="">
+                        <button type="submit" class="btn btn-block login-btn mb-4">Đăng nhập</button>
+                    </div>
+                </form>
+                <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl" class="login-card-footer-text">Đăng ký tài khoản mới</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

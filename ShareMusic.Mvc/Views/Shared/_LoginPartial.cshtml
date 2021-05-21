@@ -1,0 +1,42 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using ShareMusic.Mvc.Data
+
+@inject SignInManager<ShareMusicMvcUser> SignInManager
+@inject UserManager<ShareMusicMvcUser> UserManager
+
+
+
+<ul class="navbar-nav">
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <li class="nav-item">
+            <div class="dropdown">
+                <a id="dropdownMenuLink" class="nav-link text-dark font-weight-bold dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">@UserManager.GetUserName(User)</a>
+                <div class="dropdown-menu dropdown-menu-right text-center" aria-labelledby="dropdownMenuLink">
+                    @if (SignInManager.Context.User.IsInRole("Administrator"))
+                    {
+                        <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Quản lý</a>
+                    }
+                    else
+                    {
+                        <a class="dropdown-item" asp-area="" asp-controller="Posts" asp-action="YourPosts">Bài đăng của bạn</a>
+                        <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Tài khoản</a>
+                    }
+                    <form id="form-logout" class="form-inline d-flex justify-content-center" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                        <button type="submit" class="dropdown-item">Đăng xuất</button>
+                    </form>
+                </div>
+            </div>
+        </li>
+
+    }
+    else
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" id="register" asp-area="Identity" asp-page="/Account/Register">Đăng ký</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" id="login" asp-area="Identity" asp-page="/Account/Login">Đăng nhập</a>
+        </li>
+    }
+</ul>
